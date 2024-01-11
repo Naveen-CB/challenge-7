@@ -1,0 +1,143 @@
+:root{
+  --Cyan: hsl(179, 62%, 43%);
+  --light-cyan: hsl(179, 62%, 48%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Darker-gray:hsl(204, 43%, 83%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --ff: 'Karla', sans-serif;
+  --fw-regural: 400;
+  --fw-bold: 700;
+}
+*, *::after, *::before{
+  box-sizing: border-box;
+  margin: 0;
+}
+body{
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; 
+}
+img, video, picture, canvas, svg{
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select{
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6{
+  overflow-wrap: break-word;
+}
+body{
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: var(--Light-Gray);
+}
+.primary{
+  font-family: var(--ff);
+  font-size: 1rem;
+  display: grid;
+  margin:0 2rem;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: .2rem .8rem 1.2rem 12px var(--Darker-gray);
+}
+.primary__detail{
+  padding: 2rem;
+  background-color: var(--white);
+  display: grid;
+  gap: 1rem;
+ 
+}
+.head{
+  font-weight: var(--fw-bold);
+}
+.blue{
+  color: var(--Cyan);
+}
+.side-head{
+  font-weight: var(--fw-bold);
+  color: var(--Bright-Yellow);
+  font-size: .85rem;
+}
+.description{
+  color: var(--Grayish-Blue);
+  font-size: .85rem;
+}
+.primary__payment{
+  padding: 2rem;
+  display: grid;
+  gap: 1.5rem;
+  background-color: var(--Cyan);
+}
+.white{
+  color: var(--Light-Gray);
+}
+.payment__cost{
+  font-size: .85rem;
+}
+.pay-cost{
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.cost{
+  font-size: 1.8rem;
+  font-weight: var(--fw-bold);
+  color: var(--white);
+}
+.duration{
+  color: var(--Darker-gray)
+}
+.pay-des{
+  font-size: .85rem;
+  color: var(--Light-Gray);
+}
+.button{
+  background-color: var(--Bright-Yellow);
+  border: 0;
+  padding: .5rem;
+  border-radius: .5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+.primary__assurance{
+  padding: 2rem;
+  background-color: var(--Cyan);
+  opacity: .7;
+  display: grid;
+  gap: 1rem;
+}
+.list{
+  list-style: none;
+  padding: 0;
+  color: var(--Darker-gray);
+  font-size: .85rem;
+}
+@media (min-width: 700px) {
+  .primary{
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 638px;
+    min-height: 476px;
+  }
+  .primary__detail{
+    grid-column: 1 / 3;
+  }
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.attribution{
+  position: absolute;
+  top: 100%;
+  text-align: center;
+  padding: 1rem;
+}
